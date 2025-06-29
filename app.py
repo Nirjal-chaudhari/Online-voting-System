@@ -27,8 +27,8 @@ def inject_messages():
 #conffigure flask mail
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT']=465
-app.config['MAIL_USERNAME']="samarth123xie@gmail.com"
-app.config['MAIL_PASSWORD']="gxnv cnrg ljyc xrae"
+app.config['MAIL_USERNAME']="examplee@gmil.com"
+app.secret_key = 'your_secret_key_here'  # ❌ Keep this secret
 app.config['MAIL_USE_TLS']=False
 app.config['MAIL_USE_SSL']=True
 
@@ -367,7 +367,7 @@ def verify_vote_otp():
 @app.route('/create_poll', methods=['GET', 'POST'])
 def create_poll():
     # Check if the user is logged in and if the email matches the specified email
-    if 'email' in session and session['email'] == 'dhrumildholakia66@gmail.com':
+    if 'email' in session and session['email'] == 'admin@gmail.com':
         if request.method == 'POST':
             question = request.form['question']
             option1 = request.form['option1']
